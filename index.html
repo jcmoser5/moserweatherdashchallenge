@@ -24,39 +24,48 @@
             <label class="font-weight-bold pt-2" for="city-search"
               >Search for a City:</label>
             <div class="input-group mb-3">
-              <input type="text" class="form-control" />
+                <input type="text" class="form-control" id="search-input" />
               <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
+                <button class="btn btn-primary" type="button" id="search-button">
                   <i class="fas fa-search"></i>
                 </button>
               </div>
             </div>
           </div>
-          <div class="col-md-12 pb-3" id="search-history">
+          <div class="col-md-12 pb-3" id="search-history-container">
+            <div class="card w-100">
+              <ul class="list-group list-group-flush" id="search-history"></ul>
+          </div>
+          <div class="d-flex justify-content-end pt-3" id="clear-button-container">
+              <button class="btn btn-danger" id="clear-button"> Clear History</button>
           </div>
         </div>
         <div class="col-md-8">
-          <div class="row" id="current-forecast"></div>
-          <div class="row" id="five-day-forecast"></div>
+          <div class="row justify-content-center pt-3" id="current-forecast">
+            <div class="col-md-10 border">
+              <div class="d-flex align-items-center pt-4" id="city-name-container">
+                <h2 class="font-weight-bold" id="city-name"></h2>
+                <div id="weather-image-container"><img alt="weather-image" id="weather-image"></div>
+              </div>
+              <div class="pb-4" id="weather-container">
+                <div id="temperature"></div>
+                <div id="wind-speed"></div>
+                <div id="humidity"></div>
+                <div id="uv-index"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row" id="five-day-forecast-container">
+            <div id="five-day-forecast"></div>
+          </div>
         </div>
       </div>
     </div>
 
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/53455dd245.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/53455dd245.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
